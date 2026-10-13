@@ -1,0 +1,21 @@
+name: My first Workflow
+
+on:
+  push:
+
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print first statement
+        run: echo "Hi, this is the first statement!"
+
+      - name: Print second statement
+        run: echo "This is the second one!"
+
+  job-2:
+    runs-on: ubuntu-latest
+    needs: first-job
+    steps:
+      - name: Print third statement
+        run: echo "The first job succeeded, this is the third statement!"
