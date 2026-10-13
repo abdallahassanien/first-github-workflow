@@ -2,6 +2,7 @@ name: My First Workflow
 
 on:
   push:
+  workflow_dispatch:
 
 jobs:
   print-statements:
